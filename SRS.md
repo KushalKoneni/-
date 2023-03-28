@@ -6,7 +6,7 @@ Fill the document out following the guidelines listed in each section. Maintain 
 
 ## Group Members
 
-* [Kushal Koneni](konenikushal@gmail.com)
+* [Kushal Koneni](kkoneni@uncc.edu)
 * [Ni](mmailto:email@uncc.edu)
 * [Name](mmailto:email@uncc.edu)
 * [Name](mmailto:email@uncc.edu)
