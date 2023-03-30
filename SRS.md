@@ -31,18 +31,43 @@ When a change is made to the document, a new revision should be created. The rev
 ## Introduction
 
 In this section, you should give a brief overview of what your project will be. Describe the software system you are building and what problems it solves. You should also give a short description of the stakeholders (users of the system) and what their needs are. There is no set formatting requirement, but you should maintain a consistent structure across future sections. Not all members must contribute to this section.
+#Ask what country and city you're living in and where you want to go to.
+#It is suggest the shortest route to get to the destination
+
 
 ## Requirements
 
 Each group member must supply at least three functional requirements for the project. Each requirement should be written in the following format:
 
-* **ID:** A unique identifier for the requirement. This should be a number that is unique across the entire document (something like REQ-1, REQ-2, etc. but be sure to replace the word `ID` with the unique identifier).
+* **CIRC-4:** A unique identifier for the requirement. This should be a number that is unique across the entire document (something like REQ-1, REQ-2, etc. but be sure to replace the word `ID` with the unique identifier).
   * **Description:** A short description of the requirement. This should be a single sentence that describes the requirement. Do not replace the word `Description` with the actual description. Put the description in the space where these instructions are written. Maintain that practice for all future sections.
+
+  This requirement is to store information on what country the user wants to go to.
+
+  * **Type:** The type of requirement. Should be either `Functional` or `Non-Functional`.
+  Functional
+
+  * **Priority:** The priority of the requirement. This should be a number between 1 and 5, with 1 being the highest priority and 5 being the lowest priority.
+  1
+
+  * **Rationale:** A short description of why the requirement is important. This should be a single sentence that describes why the requirement is important.
+  
+  This requirement is important because the only way we can tell the user the shortest route to get to their destination, we need to know where they want to go.
+
+  * **Testing:** A short description of how the requirement can be tested. This should be a single sentence that describes how the requirement can be tested.
+
+  The requirement can be tested by creating a variable that will store the data of the user's destination, and do a run though to see if the program can track the destination required.
+
+* **CIRC-5:** A unique identifier for the requirement. This should be a number that is unique across the entire document (something like REQ-1, REQ-2, etc. but be sure to replace the word `ID` with the unique identifier).
+  * **Description:** A short description of the requirement. This should be a single sentence that describes the requirement.
+  This requirement is to store information on what city the user lives in.
+
   * **Type:** The type of requirement. Should be either `Functional` or `Non-Functional`.
   * **Priority:** The priority of the requirement. This should be a number between 1 and 5, with 1 being the highest priority and 5 being the lowest priority.
   * **Rationale:** A short description of why the requirement is important. This should be a single sentence that describes why the requirement is important.
   * **Testing:** A short description of how the requirement can be tested. This should be a single sentence that describes how the requirement can be tested.
-* **ID:** A unique identifier for the requirement. This should be a number that is unique across the entire document (something like REQ-1, REQ-2, etc. but be sure to replace the word `ID` with the unique identifier).
+
+* **CIRC-5** A unique identifier for the requirement. This should be a number that is unique across the entire document (something like REQ-1, REQ-2, etc. but be sure to replace the word `ID` with the unique identifier).
   * **Description:** A short description of the requirement. This should be a single sentence that describes the requirement.
   * **Type:** The type of requirement. Should be either `Functional` or `Non-Functional`.
   * **Priority:** The priority of the requirement. This should be a number between 1 and 5, with 1 being the highest priority and 5 being the lowest priority.
