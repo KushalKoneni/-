@@ -45,9 +45,11 @@ Each group member must supply at least three functional requirements for the pro
   This requirement is to store information on what country the user wants to go to.
 
   * **Type:** The type of requirement. Should be either `Functional` or `Non-Functional`.
+
   Functional
 
   * **Priority:** The priority of the requirement. This should be a number between 1 and 5, with 1 being the highest priority and 5 being the lowest priority.
+
   1
 
   * **Rationale:** A short description of why the requirement is important. This should be a single sentence that describes why the requirement is important.
@@ -60,19 +62,45 @@ Each group member must supply at least three functional requirements for the pro
 
 * **CIRC-5:** A unique identifier for the requirement. This should be a number that is unique across the entire document (something like REQ-1, REQ-2, etc. but be sure to replace the word `ID` with the unique identifier).
   * **Description:** A short description of the requirement. This should be a single sentence that describes the requirement.
+
   This requirement is to store information on what city the user lives in.
 
   * **Type:** The type of requirement. Should be either `Functional` or `Non-Functional`.
+
+  Functional
+
   * **Priority:** The priority of the requirement. This should be a number between 1 and 5, with 1 being the highest priority and 5 being the lowest priority.
+
+  2
+
   * **Rationale:** A short description of why the requirement is important. This should be a single sentence that describes why the requirement is important.
+
+  This requirement is important because we need to know what city the user lives in in order to find out the route from their location to destination. 
+
   * **Testing:** A short description of how the requirement can be tested. This should be a single sentence that describes how the requirement can be tested.
+
+  This program can be tested creating a variable that will store the data of the user's location, and do a run though to see if the program can track the location required. 
 
 * **CIRC-5** A unique identifier for the requirement. This should be a number that is unique across the entire document (something like REQ-1, REQ-2, etc. but be sure to replace the word `ID` with the unique identifier).
   * **Description:** A short description of the requirement. This should be a single sentence that describes the requirement.
+
+  Store information about their preferred airline
+
   * **Type:** The type of requirement. Should be either `Functional` or `Non-Functional`.
+
+  Functional
+
   * **Priority:** The priority of the requirement. This should be a number between 1 and 5, with 1 being the highest priority and 5 being the lowest priority.
+
+  3
+
   * **Rationale:** A short description of why the requirement is important. This should be a single sentence that describes why the requirement is important.
+
+  This requirement is important because we need to know what plane the user wants to fly with to get to their destination.
+
   * **Testing:** A short description of how the requirement can be tested. This should be a single sentence that describes how the requirement can be tested.
+
+  This requirement can be tested by having a system that tracks the airlines and checks if the user's input is stored in the system.
 
 ## Constraints
 
@@ -82,7 +110,13 @@ In this section, you should list any constraints that you have for the project. 
 
 In this section, you should list use cases for the project. Use cases are a thorough description of how the system will be used. Each group member must supply at least two use cases. Each use case should be written in the following format:
 
-* **ID:** A unique identifier for the use case. This should be a number that is unique across the entire document (something like UC-1, UC-2, etc. but be sure to replace the word `ID` with the unique identifier).
+* **TRI-1** A unique identifier for the use case. This should be a number that is unique across the entire document (something like UC-1, UC-2, etc. but be sure to replace the word `ID` with the unique identifier).
+  * **Description:** A description of the use case that gives the user a high-level overview of how the system is interacted with.
+  * **Actors:** A list of the actors that are involved in the use case. Only include the actors that are directly involved. Actors are the people or things that interact with the system. For example, when ordering at a fast food restaurant, one might have the following actors: the customer, the cashier, and the cook. But only the customer and the cashier are directly involved in the use case of ordering food. The cook is not directly involved in the use case of ordering food.
+  * **Preconditions:** A list of the preconditions for the use case. This should be a list of the preconditions for the use case, which are the conditions that must be met before the use case can be executed. Continuing with the restaurant example, the customer must have money in their wallet and the cashier must be logged in to the system before the use case of ordering food can be executed.
+  * **Postconditions:** A list of the postconditions for the use case. This should be a list of the postconditions for the use case, which are the conditions that must be met after the use case has been executed. Continuing with the restaurant example, the customer must have their food and the cashier must have the customer's money after the use case of ordering food has been executed.
+
+  * **TRI-2** A unique identifier for the use case. This should be a number that is unique across the entire document (something like UC-1, UC-2, etc. but be sure to replace the word `ID` with the unique identifier).
   * **Description:** A description of the use case that gives the user a high-level overview of how the system is interacted with.
   * **Actors:** A list of the actors that are involved in the use case. Only include the actors that are directly involved. Actors are the people or things that interact with the system. For example, when ordering at a fast food restaurant, one might have the following actors: the customer, the cashier, and the cook. But only the customer and the cashier are directly involved in the use case of ordering food. The cook is not directly involved in the use case of ordering food.
   * **Preconditions:** A list of the preconditions for the use case. This should be a list of the preconditions for the use case, which are the conditions that must be met before the use case can be executed. Continuing with the restaurant example, the customer must have money in their wallet and the cashier must be logged in to the system before the use case of ordering food can be executed.
@@ -92,7 +126,11 @@ In this section, you should list use cases for the project. Use cases are a thor
 
 In this section, you should list user stories for the project. User stories are a short description of how a user will be interacting with the system. Each group member must supply at least two user stories. Each user story should be written in the following format:
 
-* **ID:** A unique identifier for the user story. This should be a number that is unique across the entire document (something like US-1, US-2, etc. but be sure to replace the word `ID` with the unique identifier).
+* **SQU-1** A unique identifier for the user story. This should be a number that is unique across the entire document (something like US-1, US-2, etc. but be sure to replace the word `ID` with the unique identifier).
+  * **Type of User:** The type of user that the user story is for. This should be a single word that describes the type of user. For example, a user story for a customer might be `Customer` and a user story for an administrator might be `Admin`.
+  * **Description:** A description of the user story that gives a narrative from that user's perspective. This can be any length, but it must paint the picture of what the user wants to do, how they intend to do it, why they want to, and what they expect to happen.
+  
+* **SQU-2** A unique identifier for the user story. This should be a number that is unique across the entire document (something like US-1, US-2, etc. but be sure to replace the word `ID` with the unique identifier).
   * **Type of User:** The type of user that the user story is for. This should be a single word that describes the type of user. For example, a user story for a customer might be `Customer` and a user story for an administrator might be `Admin`.
   * **Description:** A description of the user story that gives a narrative from that user's perspective. This can be any length, but it must paint the picture of what the user wants to do, how they intend to do it, why they want to, and what they expect to happen.
 
