@@ -8,7 +8,7 @@ Fill the document out following the guidelines listed in each section. Maintain 
 
 * [Kushal Koneni](kkoneni@uncc.edu)
 * [Nicole Wiktor](nwiktor@uncc.edu)
-* [Name](mmailto:email@uncc.edu)
+* [gg](mmailto:email@uncc.edu)
 * [Name](mmailto:email@uncc.edu)
 
 ## Revisions
