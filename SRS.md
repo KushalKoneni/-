@@ -8,8 +8,6 @@ Fill the document out following the guidelines listed in each section. Maintain 
 
 * [Kushal Koneni](kkoneni@uncc.edu)
 * [Nicole Wiktor](nwiktor@uncc.edu)
-* [Name](mmailto:email@uncc.edu)
-* [Name](mmailto:email@uncc.edu)
 
 ## Revisions
 
@@ -31,108 +29,109 @@ When a change is made to the document, a new revision should be created. The rev
 ## Introduction
 
 In this section, you should give a brief overview of what your project will be. Describe the software system you are building and what problems it solves. You should also give a short description of the stakeholders (users of the system) and what their needs are. There is no set formatting requirement, but you should maintain a consistent structure across future sections. Not all members must contribute to this section.
-#Ask what country and city you're living in and where you want to go to.
-#It is suggest the shortest route to get to the destination
-
+Ask what country and city you're living in and where you want to go to. It is suggest the shortest route to get to the destination
 
 ## Requirements
 
 Each group member must supply at least three functional requirements for the project. Each requirement should be written in the following format:
 
-* **CIRC-4:** A unique identifier for the requirement. This should be a number that is unique across the entire document (something like REQ-1, REQ-2, etc. but be sure to replace the word `ID` with the unique identifier).
-  * **Description:** A short description of the requirement. This should be a single sentence that describes the requirement. Do not replace the word `Description` with the actual description. Put the description in the space where these instructions are written. Maintain that practice for all future sections.
+* **CIRC-1:**
+  * **Description:** This requirement is to store information on what country the user lives in.
+  * **Type:** Functional
+  * **Priority:** 3
+  * **Rationale:** This requirenment is needed to know where the user hails from
+  * **Testing:** This program can be tested creating a variable that will store the data of the user's country, and do a run though to see if the program
 
-  This requirement is to store information on what country the user wants to go to.
+* **CIRC-2:**
+  * **Description:** store the distance between airports
+  * **Type:** Non-Functional
+  * **Priority:** 1
+  * **Rationale:** we need to know how far each airport is from one another
+  * **Testing:** we shall test by storage of the variable
 
-  * **Type:** The type of requirement. Should be either `Functional` or `Non-Functional`.
+* **CIRC-3:**
+  * **Description:** This requirenment stores info on countries the user would like to visit
+  * **Type:** Non-Functional
+  * **Priority:** 1
+  * **Rationale:** creates a list of countries for conviniece
+  * **Testing:** This will be tested when the data is stored
 
-  Functional
+* **CIRC-4:**
+  * **Description:** This requirement is to store information on what country the user wants to go to.
+  * **Type:** Functional
+  * **Priority:** 1
+  * **Rationale:** This requirement is important because the only way we can tell the user the shortest route to get to their destination, we need to know where they want to go.
+  * **Testing:** The requirement can be tested by creating a variable that will store the data of the user's destination, and do a run though to see if the program can track the destination required.
 
-  * **Priority:** The priority of the requirement. This should be a number between 1 and 5, with 1 being the highest priority and 5 being the lowest priority.
+* **CIRC-5:**
+  * **Description:** This requirement is to store information on what city the user lives in.
+  * **Type:** Functional
+  * **Priority:** 2
+  * **Rationale:** This requirement is important because we need to know what city the user lives in in order to find out the route from their location to destination.
+  * **Testing:** This program can be tested creating a variable that will store the data of the user's location, and do a run though to see if the program
 
-  1
-
-  * **Rationale:** A short description of why the requirement is important. This should be a single sentence that describes why the requirement is important.
-  
-  This requirement is important because the only way we can tell the user the shortest route to get to their destination, we need to know where they want to go.
-
-  * **Testing:** A short description of how the requirement can be tested. This should be a single sentence that describes how the requirement can be tested.
-
-  The requirement can be tested by creating a variable that will store the data of the user's destination, and do a run though to see if the program can track the destination required.
-
-* **CIRC-5:** A unique identifier for the requirement. This should be a number that is unique across the entire document (something like REQ-1, REQ-2, etc. but be sure to replace the word `ID` with the unique identifier).
-  * **Description:** A short description of the requirement. This should be a single sentence that describes the requirement.
-
-  This requirement is to store information on what city the user lives in.
-
-  * **Type:** The type of requirement. Should be either `Functional` or `Non-Functional`.
-
-  Functional
-
-  * **Priority:** The priority of the requirement. This should be a number between 1 and 5, with 1 being the highest priority and 5 being the lowest priority.
-
-  2
-
-  * **Rationale:** A short description of why the requirement is important. This should be a single sentence that describes why the requirement is important.
-
-  This requirement is important because we need to know what city the user lives in in order to find out the route from their location to destination. 
-
-  * **Testing:** A short description of how the requirement can be tested. This should be a single sentence that describes how the requirement can be tested.
-
-  This program can be tested creating a variable that will store the data of the user's location, and do a run though to see if the program can track the location required. 
-
-* **CIRC-5** A unique identifier for the requirement. This should be a number that is unique across the entire document (something like REQ-1, REQ-2, etc. but be sure to replace the word `ID` with the unique identifier).
-  * **Description:** A short description of the requirement. This should be a single sentence that describes the requirement.
-
-  Store information about their preferred airline
-
-  * **Type:** The type of requirement. Should be either `Functional` or `Non-Functional`.
-
-  Functional
-
-  * **Priority:** The priority of the requirement. This should be a number between 1 and 5, with 1 being the highest priority and 5 being the lowest priority.
-
-  3
-
-  * **Rationale:** A short description of why the requirement is important. This should be a single sentence that describes why the requirement is important.
-
-  This requirement is important because we need to know what plane the user wants to fly with to get to their destination.
-
-  * **Testing:** A short description of how the requirement can be tested. This should be a single sentence that describes how the requirement can be tested.
-
-  This requirement can be tested by having a system that tracks the airlines and checks if the user's input is stored in the system.
+* **CIRC-6:**
+  * **Description:** Store information about their preferred airline
+  * **Type:** Functional
+  * **Priority:** 3
+  * **Rationale:** This requirement is important because we need to know what plane the user wants to fly with to get to their destination.
+  * **Testing:** This requirement can be tested by having a system that tracks the airlines and checks if the user's input is stored in the system.
 
 ## Constraints
 
 In this section, you should list any constraints that you have for the project. Each group member must supply at least two constraints. These can be constraints on the project itself, the software system, or the stakeholders. Constraints can be anything that limits the scope of the project. For example, that this project's template code is written using Flask and Python constitutes a constraint on the backend of the project. Constraints can also be things like the required timeline of the project. Be creative.
+Having a implossible amount of countries to travel
+Having a implossible amount of airlines to travel
+wether to include domestic or reginal with international
+We may not be able to gauge distances precisely
 
 ## Use Cases
 
 In this section, you should list use cases for the project. Use cases are a thorough description of how the system will be used. Each group member must supply at least two use cases. Each use case should be written in the following format:
 
-* **TRI-1** A unique identifier for the use case. This should be a number that is unique across the entire document (something like UC-1, UC-2, etc. but be sure to replace the word `ID` with the unique identifier).
-  * **Description:** A description of the use case that gives the user a high-level overview of how the system is interacted with.
-  * **Actors:** A list of the actors that are involved in the use case. Only include the actors that are directly involved. Actors are the people or things that interact with the system. For example, when ordering at a fast food restaurant, one might have the following actors: the customer, the cashier, and the cook. But only the customer and the cashier are directly involved in the use case of ordering food. The cook is not directly involved in the use case of ordering food.
-  * **Preconditions:** A list of the preconditions for the use case. This should be a list of the preconditions for the use case, which are the conditions that must be met before the use case can be executed. Continuing with the restaurant example, the customer must have money in their wallet and the cashier must be logged in to the system before the use case of ordering food can be executed.
-  * **Postconditions:** A list of the postconditions for the use case. This should be a list of the postconditions for the use case, which are the conditions that must be met after the use case has been executed. Continuing with the restaurant example, the customer must have their food and the cashier must have the customer's money after the use case of ordering food has been executed.
+* **TRI-1**  
+  * **Description:** A user wants to find the shortest route from their current location to a specific destination in the same city.
+  * **Actors:** User, routing system for the map data
+  * **Preconditions:** User has a device with an internet connection and GPS capability, routing system has access to up-to-date map and traffic data.
+  * **Postconditions:** User is given the shortest route to the destination, including estimated travel time and distance.
 
-  * **TRI-2** A unique identifier for the use case. This should be a number that is unique across the entire document (something like UC-1, UC-2, etc. but be sure to replace the word `ID` with the unique identifier).
-  * **Description:** A description of the use case that gives the user a high-level overview of how the system is interacted with.
-  * **Actors:** A list of the actors that are involved in the use case. Only include the actors that are directly involved. Actors are the people or things that interact with the system. For example, when ordering at a fast food restaurant, one might have the following actors: the customer, the cashier, and the cook. But only the customer and the cashier are directly involved in the use case of ordering food. The cook is not directly involved in the use case of ordering food.
-  * **Preconditions:** A list of the preconditions for the use case. This should be a list of the preconditions for the use case, which are the conditions that must be met before the use case can be executed. Continuing with the restaurant example, the customer must have money in their wallet and the cashier must be logged in to the system before the use case of ordering food can be executed.
-  * **Postconditions:** A list of the postconditions for the use case. This should be a list of the postconditions for the use case, which are the conditions that must be met after the use case has been executed. Continuing with the restaurant example, the customer must have their food and the cashier must have the customer's money after the use case of ordering food has been executed.
+* **TRI-2**  
+  * **Description:** User pays money to book a plane.
+  * **Actors:** User, The person who wants to book a plane ticket and pays for it.
+  * **Preconditions:** User's payment has been processed and confirmed by the system. User receives a confirmation of the booked flight with all relevant details like flight number, date, and time.
+  * **Postconditions:** User's payment has been processed and confirmed by the system. User receives a confirmation of the booked flight with all relevant details like flight number, date, and time.
+
+* **TRI-3**  
+  * **Description:** User tries to see what airline is best to travel with
+  * **Actors:** User, database
+  * **Preconditions:** keep in mind the user's airline preference and what countries they want to visit
+  * **Postconditions:** lists best airline routs and airport cites
+
+* **TRI-4**  
+  * **Description:** User wants to know the time it would take to travel to certain countries in one trip
+  * **Actors:** User, database
+  * **Preconditions:** the user would need to input what countries they want to go to, and their current country
+  * **Postconditions:** lists the time and distance of each plane ride.
 
 ## User Stories
 
 In this section, you should list user stories for the project. User stories are a short description of how a user will be interacting with the system. Each group member must supply at least two user stories. Each user story should be written in the following format:
 
-* **SQU-1** A unique identifier for the user story. This should be a number that is unique across the entire document (something like US-1, US-2, etc. but be sure to replace the word `ID` with the unique identifier).
-  * **Type of User:** The type of user that the user story is for. This should be a single word that describes the type of user. For example, a user story for a customer might be `Customer` and a user story for an administrator might be `Admin`.
-  * **Description:** A description of the user story that gives a narrative from that user's perspective. This can be any length, but it must paint the picture of what the user wants to do, how they intend to do it, why they want to, and what they expect to happen.
-  
-* **SQU-2** A unique identifier for the user story. This should be a number that is unique across the entire document (something like US-1, US-2, etc. but be sure to replace the word `ID` with the unique identifier).
-  * **Type of User:** The type of user that the user story is for. This should be a single word that describes the type of user. For example, a user story for a customer might be `Customer` and a user story for an administrator might be `Admin`.
-  * **Description:** A description of the user story that gives a narrative from that user's perspective. This can be any length, but it must paint the picture of what the user wants to do, how they intend to do it, why they want to, and what they expect to happen.
+* **SQU-1**
+  * **Type of User:** Navigator
+  * **Description:** Someone who would explore different airports destinations in different countries.
+
+* **SQU-2**
+  * **Type of User:** Domestic
+  * **Description:** Someone who wants to see flight options from cities within their country
+
+* **SQU-3**
+  * **Type of User:** Distance
+  * **Description:** User will check the distance between different airports of their choosing
+
+* **SQU-4**
+  * **Type of User:** airline
+  * **Description:** In this senario a user will look to see what flights destinations are avalible through their preffered airline
 
 ## Glossary
 
@@ -140,3 +139,9 @@ In this section, you should list any terms that are used in the document that ma
 
 * **Term:** The term that is being defined. This should be a single word or phrase that is being defined.
   * **Definition:** A definition of the term. This should be a short description of the term that is being defined. This should be a single sentence that describes the term.
+
+* **Term:** Distance
+  * **Definition:** length or time from two airports
+
+* **Term:** airline
+  * **Definition:** different airlines and the airports they are hub's of.
