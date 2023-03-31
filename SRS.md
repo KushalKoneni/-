@@ -160,7 +160,7 @@ In this section, you should list user stories for the project. User stories are 
   Customer works for a company that requires travel across the world. He wants to be able to book a flight from Charlotte to Italy for his next business meeting. He will do it by going on the website and look for flight prices and routes because he wants to find the quickest route. They are willing to pay extra for a more comfortable seat. They expect to go on the website and find flight routes and distances and pick the best one.
   
 * **SQU-2** A unique identifier for the user story. This should be a number that is unique across the entire document (something like US-1, US-2, etc. but be sure to replace the word `ID` with the unique identifier). k
-  * **Type of User:** The type of user that the user story is for. This should be a single word that describes the type of user. For example, a user story for a customer might be `Customer` and a user story for an administrator might be `Admin`.
+  * **Type of User:** The type of user that the user story is for. This should be a single word that describes the type of user. For example, a user story for a customer might be `Customer` and a user story for an administrator might be `Admin`. .
 
   Customer (user)
 
