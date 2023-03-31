@@ -159,7 +159,7 @@ In this section, you should list user stories for the project. User stories are 
 
   Customer works for a company that requires travel across the world. He wants to be able to book a flight from Charlotte to Italy for his next business meeting. He will do it by going on the website and look for flight prices and routes because he wants to find the quickest route. They are willing to pay extra for a more comfortable seat. They expect to go on the website and find flight routes and distances and pick the best one.
   
-* **SQU-2** A unique identifier for the user story. This should be a number that is unique across the entire document (something like US-1, US-2, etc. but be sure to replace the word `ID` with the unique identifier).
+* **SQU-2** A unique identifier for the user story. This should be a number that is unique across the entire document (something like US-1, US-2, etc. but be sure to replace the word `ID` with the unique identifier). k
   * **Type of User:** The type of user that the user story is for. This should be a single word that describes the type of user. For example, a user story for a customer might be `Customer` and a user story for an administrator might be `Admin`.
 
   Customer (user)
@@ -167,7 +167,7 @@ In this section, you should list user stories for the project. User stories are 
   * **Description:** A description of the user story that gives a narrative from that user's perspective. This can be any length, but it must paint the picture of what the user wants to do, how they intend to do it, why they want to, and what they expect to happen.
 
   Customer is a college student wanting to book the cheapest and quickest flight from Arizona to Mexico. They want to go on vacation with a group of friends so they want to order a few tickets at once. They will do it by going on the website and making a group order of flights to add to cart. They expect to have prices, routes, and times for their flight.
-
+ j
 ## Glossary
 
 In this section, you should list any terms that are used in the document that may not be immediately obvious to a naive reader. Each group member must supply at least one term. Each term should be written in the following format:
