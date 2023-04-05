@@ -26,7 +26,7 @@ All of the above diagrams must be generated, so split this work evenly and push 
 
 ```bash
 pyreverse --output puml --colorized -A --output-directory testing testin # generates testing/package.puml
-python3.10 -m plantuml testing/package.puml # generates testing/package.png
+python3.10 -m plantuml testing/package.puml # generates testing/package.png 
 ```
 
 Since `testing` has no classes, we do not need a class diagram, but if we did, we would change the `testing/package.puml` to `testing/classes.puml` in the last command.
