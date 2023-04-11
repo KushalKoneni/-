@@ -1,0 +1,23 @@
+@startuml selectview
+actor User
+boundary "Routing System" as routing_system
+control "Sessions" as sessions
+control "Flight Catalogue" as flight_catalogue
+User -> routing_system: Open App
+activate routing_system
+routing_system -> routing_system: Display available flights
+routing_system -> User: Select flights from list
+User -> routing_system: Flight list
+deactivate routing_system
+activate sessions
+sessions -> flight_catalogue: Get flight catalogue(Flight list)
+activate flight_catalogue
+flight_catalogue --> sessions: Flight catalogue
+deactivate flight_catalogue
+sessions --> routing_system: Selected flights
+deactivate sessions
+activate routing_system
+routing_system -> routing_system: Display selected flights
+routing_system -> User: View selected flights
+deactivate routing_system
+@enduml

@@ -1,3 +1,12 @@
-@startuml classes
-set namespaceSeparator none
+@startuml user
+left to right direction
+actor User
+rectangle "Routing System" as routing {
+  (access to airport traffic data)
+  (see distance between airports)
+  (see different availible routes)
+}
+User --> (access to airport traffic data)
+User --> (see distance between airports)
+User --> (see different availible routes)
 @enduml

@@ -1,0 +1,23 @@
+@startuml available_flights
+actor User
+boundary "Routing System" as routing_system
+control "Sessions" as sessions
+control "Flight Data" as flight_data
+User -> routing_system: Open App
+activate routing_system
+routing_system -> User: Select airports
+User -> routing_system: Airport A, Airport B
+deactivate routing_system
+activate sessions
+sessions -> flight_data: Get available flights(Airport A, Airport B)
+activate flight_data
+flight_data --> sessions: Flights data
+deactivate flight_data
+sessions --> routing_system: Flight list
+deactivate sessions
+activate routing_system
+routing_system -> routing_system: Display flight list
+deactivate routing_system
+routing_system -> routing_system: redirect to home page
+deactivate routing_system
+@enduml

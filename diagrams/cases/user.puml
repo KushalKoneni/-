@@ -1,3 +1,14 @@
-@startuml classes
-set namespaceSeparator none
+@startuml customer
+left to right direction
+actor User #purple
+rectangle "Routing System" as system {
+  (selects flight)
+  (views available flights)
+  (views flight timings)
+  (views booked flights)
+}
+User --> (selects flight)
+User --> (views available flights)
+User --> (views flight timings)
+User --> (views booked flights)
 @enduml

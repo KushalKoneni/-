@@ -1,4 +1,17 @@
-@startuml classes
-set namespaceSeparator none
+@startuml catalogue
+left to right direction
+
+actor User
+rectangle Catalogue {
+  usecase "Find shortest route" as UC1 #orange
+  usecase "Book payments" as UC2 #orange
+  usecase "See time between airports" as UC3 #orange
+}
+
+User --> UC1
+User --> UC2
+User --> UC3
+UC1 --> Catalogue
+UC2 --> Catalogue
+UC3 --> Catalogue
 @enduml
-test
