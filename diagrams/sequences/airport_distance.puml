@@ -1,0 +1,13 @@
+@startuml airport_distance
+actor User
+boundary "Routing System" as routing_system
+control "Sessions" as sessions
+User -> routing_system: Open App
+activate routing_system
+routing_system -> sessions: check distance
+activate sessions
+sessions --> routing_system: None
+deactivate sessions
+routing_system -> routing_system: redirect to home page
+deactivate routing_system
+@enduml
