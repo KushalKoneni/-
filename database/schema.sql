@@ -1,11 +1,8 @@
-CREATE TABLE inventory (
+CREATE TABLE cities (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    item_name VARCHAR(255) NOT NULL,
-    info VARCHAR(255) NOT NULL,
-    price DECIMAL(10,2) NOT NULL,
-    stock INTEGER NOT NULL,
-    image_url VARCHAR(255) NOT NULL,
-    category VARCHAR(255) NOT NULL
+    city_name VARCHAR(255) NOT NULL,
+    state_code VARCHAR(2) NOT NULL,
+    population INTEGER NOT NULL
 );
 
 CREATE TABLE users (
