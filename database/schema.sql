@@ -1,27 +1,7 @@
-CREATE TABLE cities (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    city_name VARCHAR(255) NOT NULL,
-    state_code VARCHAR(2) NOT NULL,
-    population INTEGER NOT NULL
+CREATE TABLE catalogue (
+    city_1 VARCHAR(50) NOT NULL,
+    city_2 VARCHAR(50) NOT NULL,
+    nautical_miles INTEGER NOT NULL,
+    time_minutes INTEGER NOT NULL,
+    PRIMARY KEY (city_1, city_2)
 );
-
-CREATE TABLE users (
-    username VARCHAR(255) PRIMARY KEY NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    first_name VARCHAR(255) NOT NULL,
-    last_name VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE sales (
-    sale_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    transaction_id VARCHAR(255) NOT NULL,
-    username VARCHAR(255) NOT NULL,
-    item_id INTEGER NOT NULL,
-    quantity INTEGER NOT NULL,
-    sale_date DATETIME NOT NULL,
-    cost DECIMAL(10,2) NOT NULL,
-    FOREIGN KEY (username) REFERENCES users(username),
-    FOREIGN KEY (item_id) REFERENCES inventory(id)
-);
-
