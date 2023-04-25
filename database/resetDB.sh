@@ -4,4 +4,4 @@ if [ -f catalogueData.db ]; then
     rm -rf catalogueData.db
 fi
 sqlite3 catalogueData.db < schema.sql
-sqlite3 catalogueData.db < startingData.sql
+sqlite3 catalogueData.db < catalogueData.sql
