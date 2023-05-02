@@ -108,6 +108,7 @@ def register():
 
 @app.route('/calculate', methods=['POST'])
 def calculate():
+    time_minutes = 
     
     return render_template('results.html', time=time_minutes)
 
