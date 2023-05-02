@@ -20,18 +20,19 @@
                 <div class="form-group">
                     <label for="city_1">STARTING CITY</label>
                     <select class="form-control" id="city_1" name="city_1">
-                        <option value="1">New York City</option>
-                        <option value="2">Los Angeles</option>
-                        <option value="3">Chicago</option>
-                        <option value="4">Dallas</option>
-                        <option value="5">Houston</option>
-                        <option value="6">San Francisco</option>
-                        <option value="7">Washington DC</option>
-                        <option value="8">Philadelphia</option>
-                        <option value="9">Atlanta</option>
-                        <option value="10">Miami</option>
-                        <option value="11">Phoenix</option>
-                        <option value="12">Boston</option>
+                        <option value="1">select</option>
+                        <option value="2">New York City</option>
+                        <option value="3">Los Angeles</option>
+                        <option value="4">Chicago</option>
+                        <option value="5">Dallas</option>
+                        <option value="6">Houston</option>
+                        <option value="7">San Francisco</option>
+                        <option value="8">Washington DC</option>
+                        <option value="9">Philadelphia</option>
+                        <option value="10">Atlanta</option>
+                        <option value="11">Miami</option>
+                        <option value="12">Phoenix</option>
+                        <option value="13">Boston</option>
                     </select>
                 </div>
             </div>
@@ -39,25 +40,26 @@
                 <div class="form-group">
                     <label for="city_2">DESTINATION CITY</label>
                     <select class="form-control" id="city_2" name="city_2">
-                        <option value="1">New York City</option>
-                        <option value="2">Los Angeles</option>
-                        <option value="3">Chicago</option>
-                        <option value="4">Dallas</option>
-                        <option value="5">Houston</option>
-                        <option value="6">San Francisco</option>
-                        <option value="7">Washington DC</option>
-                        <option value="8">Philadelphia</option>
-                        <option value="9">Atlanta</option>
-                        <option value="10">Miami</option>
-                        <option value="11">Phoenix</option>
-                        <option value="12">Boston</option>
+                        <option value="1">select</option>
+                        <option value="2">New York City</option>
+                        <option value="3">Los Angeles</option>
+                        <option value="4">Chicago</option>
+                        <option value="5">Dallas</option>
+                        <option value="6">Houston</option>
+                        <option value="7">San Francisco</option>
+                        <option value="8">Washington DC</option>
+                        <option value="9">Philadelphia</option>
+                        <option value="10">Atlanta</option>
+                        <option value="11">Miami</option>
+                        <option value="12">Phoenix</option>
+                        <option value="13">Boston</option>
                     </select>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12" id="index_buttons">
-                <button type="submit" class="btn btn-primary" id="okay_button">OKAY</button>
+                <button type="submit" class="btn btn-primary" id="okay_button" disabled>OKAY</button>
             </div>
         </div>
         <div class="row" style="margin-top: 20px;">
@@ -67,4 +69,21 @@
         </div>
     </div>
 </div>
+
+<script>
+    const city1 = document.getElementById("city_1");
+    const city2 = document.getElementById("city_2");
+    const okayButton = document.getElementById("okay_button");
+    
+    function checkOptions() {
+      if (city1.value === city2.value) {
+        okayButton.disabled = true;
+      } else {
+        okayButton.disabled = false;
+      }
+    }
+    
+    city1.addEventListener("change", checkOptions);
+    city2.addEventListener("change", checkOptions);
+  </script>
 {% endblock %}
