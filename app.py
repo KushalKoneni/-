@@ -4,7 +4,6 @@ from authentication.authTools import login_pipeline, update_passwords, hash_pass
 from database.db import Database
 from flask import Flask, render_template, request
 from core.session import Sessions
-import random
 
 app = Flask(__name__)
 HOST, PORT = 'localhost', 8080
@@ -109,8 +108,12 @@ def register():
 
 @app.route('/calculate', methods=['POST'])
 def calculate():
+<<<<<<< HEAD
     # Generate a random trip time between 100 and 300 minutes
     time_minutes = random.randint(100, 300)
+=======
+    time_minutes = 
+>>>>>>> 49a80006e22cb9c3c5679879198da9a5ae4974b8
     
     return render_template('results.html', time=time_minutes)
 
