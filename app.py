@@ -109,8 +109,7 @@ def register():
 
 @app.route('/calculate', methods=['POST'])
 def calculate():
-    # Generate a random trip time between 100 and 300 minutes
-    time_minutes = random.randint(100, 300)
+    time_minutes = random.randint(150, 250)
     
     return render_template('results.html', time=time_minutes)
 
