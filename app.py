@@ -4,6 +4,7 @@ from authentication.authTools import login_pipeline, update_passwords, hash_pass
 from database.db import Database
 from flask import Flask, render_template, request
 from core.session import Sessions
+import random
 
 app = Flask(__name__)
 HOST, PORT = 'localhost', 8080
@@ -13,7 +14,6 @@ db = Database('database/storeRecords.db')
 products = db.get_full_inventory()
 sessions = Sessions()
 sessions.add_new_session(username, db)
-
 
 @app.route('/')
 def index_page():
@@ -107,6 +107,12 @@ def register():
     db.insert_user(username, key, email, first_name, last_name)
     return render_template('index.html')
 
+@app.route('/calculate', methods=['POST'])
+def calculate():
+    # Generate a random trip time between 100 and 300 minutes
+    time_minutes = random.randint(100, 300)
+    
+    return render_template('results.html', time=time_minutes)
 
 @app.route('/checkout', methods=['POST'])
 def checkout():
