@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Book your Flight</h1>
+<!-- Add your booking form and other content here -->
+
+</div>
+<div class="col-md-6">
+    <h3>Where would you like to go?</h3>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="city_1">STARTING CITY</label>
+                <select class="form-control" id="city_1" name="city_1">
+                    <option value="1">New York City</option>
+                    <option value="2">Los Angeles</option>
+                    <option value="3">Chicago</option>
+                    <option value="4">Dallas</option>
+                    <option value="5">Houston</option>
+                    <option value="6">San Francisco</option>
+                    <option value="7">Washington DC</option>
+                    <option value="8">Philadelphia</option>
+                    <option value="9">Atlanta</option>
+                    <option value="10">Miami</option>
+                    <option value="11">Phoenix</option>
+                    <option value="12">Boston</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="city_2">DESTINATION CITY</label>
+                <select class="form-control" id="city_2" name="city_2">
+                    <option value="1">New York City</option>
+                    <option value="2">Los Angeles</option>
+                    <option value="3">Chicago</option>
+                    <option value="4">Dallas</option>
+                    <option value="5">Houston</option>
+                    <option value="6">San Francisco</option>
+                    <option value="7">Washington DC</option>
+                    <option value="8">Philadelphia</option>
+                    <option value="9">Atlanta</option>
+                    <option value="10">Miami</option>
+                    <option value="11">Phoenix</option>
+                    <option value="12">Boston</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" id="index_buttons">
+            <button type="submit" class="btn btn-primary" id="okay_button">OKAY</button>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-md-6">
+            <h5>Time Minutes: <span id="time_minutes"></span></h5>
+        </div>
+    </div>
+</div>
+{% endblock %}
