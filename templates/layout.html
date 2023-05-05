@@ -1,19 +1,42 @@
-<!-- Template HTML file  -->
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>EXPERIENCE FOR THE MASSES</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
-
+<style>
+    .navbar-brand {
+        font-size: 30px;
+    }
+</style>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Airlines</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link fs-4 me-3" href="/book-flights">Book Flights</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-4 me-3" href="/manage-flights">Manage Flights</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-4 me-3" href="/cart">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>EXPERIENCE FOR THE MASSES</h1>
+                
+                <img src="static/images/airplane4.jpg" alt="Airplane" style="width: 100%;">
                 <hr>
                 <div class="content">
                     <!-- This is where the content will be rendered -->
@@ -23,4 +46,9 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-6U/7V2lD6u0gZC0N/dUf7XE+NUbNapRh6nUPbzJbEg1auHeQ6HJnL26ZC1XfqJ6F"
+        crossorigin="anonymous"></script>
 </body>
+
+</html>
