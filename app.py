@@ -140,6 +140,13 @@ def checkout():
 
     return render_template('checkout.html', order=order, sessions=sessions, total_cost=user_session.total_cost)
 
+@app.route('/book-flights')
+def book_flights():
+    return render_template('book-flights.html')
+
+@app.route('/manage-flights')
+def manage_flights():
+    return render_template('manage-flights.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host=HOST, port=PORT)
