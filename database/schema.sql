@@ -35,3 +35,16 @@ CREATE TABLE catalogue (
     time_minutes INTEGER NOT NULL,
     PRIMARY KEY (city_1, city_2)
 );
+CREATE TABLE flights (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    origin TEXT NOT NULL,
+    destination TEXT NOT NULL,
+    distance INTEGER NOT NULL,
+    time_depart TEXT NOT NULL,
+    time_arrive TEXT NOT NULL,
+    ticket_price INTEGER NOT NULL
+);
+
+
+
+

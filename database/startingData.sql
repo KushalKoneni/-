@@ -173,3 +173,11 @@ VALUES  ('New York City', 'New York City', 0, 0),
         ('Boston', 'Miami', 1092, 109),
         ('Boston', 'Phoenix', 1994, 199),
         ('Boston', 'Boston', 0, 0);
+
+INSERT INTO 'flights' ('origin', 'destination', 'distance', 'time_depart', 'time_arrive', 'ticket_price') 
+VALUES ('New York City', 'Los Angeles', 2462, '2023-05-15 07:00:00', '2023-05-15 10:30:00', 400),
+       ('New York City', 'San Francisco', 2571, '2023-05-16 08:00:00', '2023-05-16 12:00:00', 500),
+       ('Los Angeles', 'New York City', 2462, '2023-05-17 09:00:00', '2023-05-17 16:30:00', 450),
+       ('Los Angeles', 'San Francisco', 383, '2023-05-18 10:00:00', '2023-05-18 12:00:00', 150),
+       ('San Francisco', 'New York City', 2571, '2023-05-19 11:00:00', '2023-05-19 20:00:00', 600),
+       ('San Francisco', 'Los Angeles', 383, '2023-05-20 12:00:00', '2023-05-20 14:00:00', 200);
