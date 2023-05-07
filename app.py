@@ -147,7 +147,7 @@ def book_flight():
         destination_city = request.form['city_2']
 
         # Connect to the database and query the flights table for flights that match the selected cities
-        conn = sqlite3.connect('database/flights.db')
+        conn = sqlite3.connect('database/storeRecords.db')
         
         c = conn.cursor()
         c.execute("SELECT * FROM flights WHERE origin=? AND destination=?", (origin_city, destination_city))
@@ -165,7 +165,7 @@ flight_cart = []
 def cart():
     if request.method == 'POST':
         selected_flights = request.form.getlist('flight_id')
-        conn = sqlite3.connect('database/flights.db')
+        conn = sqlite3.connect('database/storeRecords.db')
         c = conn.cursor()
 
         for flight_id in selected_flights:
@@ -185,7 +185,7 @@ def manage_flights():
     selected_flight = None
     if selected_flight_id:
         # query the database to get the flight details
-        with sqlite3.connect('flights.db') as conn:
+        with sqlite3.connect('storeRecords.db') as conn:
             cursor = conn.cursor()
             cursor.execute('SELECT * FROM flights WHERE flight_number = ?', (selected_flight_id,))
             row = cursor.fetchone()
