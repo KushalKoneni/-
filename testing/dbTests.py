@@ -86,3 +86,23 @@ def test_check_connection_threaded(db: Database = None) -> tuple:
         return False, error
     else:
         return True, "Connection is not single threaded."
+    
+
+def test_setup_db(db: Database = None) -> tuple:
+    """
+    Tests that the database is set up correctly.
+
+    args:
+        - db: a Database object (optional)
+
+    returns:
+        - error_report: a tuple containing a boolean and a string, 
+        
+    """
+    db = Database('flights.db') if db is None else db
+
+    if db.database_path != 'flights.db':
+        error = f'Error in test_init_db: Database path is not correct.\n  - Actual: {db.database_path}'
+        return False, error
+    else:
+        return True, 'Database path is correct.'
