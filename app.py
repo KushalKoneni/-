@@ -2,7 +2,7 @@
 
 from authentication.authTools import login_pipeline, update_passwords, hash_password
 from database.db import Database
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash, redirect
 from core.session import Sessions
 import sqlite3
 
@@ -174,6 +174,10 @@ def book_flight():
 
 
 
+
+@app.route('/cart')
+def cart():
+    return render_template('cart.html')
 
 
 
