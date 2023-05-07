@@ -10,7 +10,7 @@ app = Flask(__name__)
 HOST, PORT = 'localhost', 8080
 global username, products, db, sessions
 username = 'default'
-db = Database('database/storeRecords.db')
+db = Database('database/flights.db')
 products = db.get_full_inventory()
 sessions = Sessions()
 sessions.add_new_session(username, db)
@@ -95,7 +95,7 @@ def register():
 
     modifies:
         - passwords.txt: adds a new username and password combination to the file
-        - database/storeRecords.db: adds a new user to the database
+        - database/flights.db: adds a new user to the database
     """
     username = request.form['username']
     password = request.form['password']
