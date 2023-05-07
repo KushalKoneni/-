@@ -96,6 +96,11 @@ def test_db() -> tuple:
     except Exception as e:
         return False, f"test_init_db failed with error: {e}"
 
+from testing.dbTests import test_get_flight_by_id
+
+def test_get_flight_by_id():
+    result, error_report = test_get_flight_by_id()
+    assert result, error_report
 
 def main() -> None:
     """

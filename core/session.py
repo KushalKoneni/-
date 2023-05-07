@@ -113,6 +113,37 @@ class UserSession:
         """
         self.update_total_cost()
         self.date = datetime.now()
+        import sqlite3
+
+def get_flight_ids():
+    import sqlite3
+    """
+    Retrieves all the flight ids from the flight table in a SQL database.
+
+    args:
+        - None
+
+    returns:
+        - A list of flight ids.
+    """
+    # Connect to the database
+    conn = sqlite3.connect('example.db')
+
+    # Create a cursor
+    cursor = conn.cursor()
+
+    # Execute the query to retrieve all the flight ids
+    cursor.execute('SELECT id FROM flight')
+
+    # Fetch all the flight ids from the cursor and store them in a list
+    flight_ids = [row[0] for row in cursor.fetchall()]
+
+    # Close the cursor and database connection
+    cursor.close()
+    conn.close()
+
+    return flight_ids
+
 
 
 class Sessions:
