@@ -4,7 +4,6 @@ from authentication.authTools import login_pipeline, update_passwords, hash_pass
 from database.db import Database
 from flask import Flask, render_template, request
 from core.session import Sessions
-import pandas as pd
 import sqlite3
 
 app = Flask(__name__)
@@ -172,6 +171,9 @@ def book_flight():
 
     # Render the booking form
     return render_template('book_flight.html')
+
+
+
 
 
 
