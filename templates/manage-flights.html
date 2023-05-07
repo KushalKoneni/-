@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<h1>Manage Flights</h1>
+	{% if selected_flight %}
+		<h2>Selected Flight:</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Flight ID</th>
+					<th>Origin</th>
+					<th>Destination</th>
+					<th>Distance</th>
+					<th>Departure Time</th>
+					<th>Arrival Time</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{ selected_flight[0] }}</td>
+					<td>{{ selected_flight[1] }}</td>
+					<td>{{ selected_flight[2] }}</td>
+					<td>{{ selected_flight[3] }}</td>
+					<td>{{ selected_flight[4] }}</td>
+					<td>{{ selected_flight[5] }}</td>
+					<td>{{ selected_flight[6] }}</td>
+				</tr>
+			</tbody>
+		</table>
+	{% else %}
+		<p>No flight selected.</p>
+	{% endif %}
+{% endblock %}

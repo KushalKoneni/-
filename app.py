@@ -4,6 +4,7 @@ from authentication.authTools import login_pipeline, update_passwords, hash_pass
 from database.db import Database
 from flask import Flask, render_template, request
 from core.session import Sessions
+import sqlite3
 
 app = Flask(__name__)
 HOST, PORT = 'localhost', 8080
@@ -139,6 +140,41 @@ def checkout():
     user_session.submit_cart()
 
     return render_template('checkout.html', order=order, sessions=sessions, total_cost=user_session.total_cost)
+
+@app.route('/book-flights')
+def book_flights():
+    return render_template('book-flights.html')
+
+
+
+
+@app.route('/manage-flights')
+def manage_flights():
+    return render_template('manage-flights.html')
+
+@app.route('/', methods=['GET', 'POST'])
+def book_flight():
+    if request.method == 'POST':
+        # Retrieve the selected origin and destination cities from the form
+        origin_city = request.form['city_1']
+        destination_city = request.form['city_2']
+
+        # Connect to the database and query the flights table for flights that match the selected cities
+        conn = sqlite3.connect('database/flights.db')
+        
+        c = conn.cursor()
+        c.execute("SELECT * FROM flights WHERE origin=? AND destination=?", (origin_city, destination_city))
+        flights = c.fetchall()
+
+        # Pass the flights to the template and render it
+        return render_template('flights.html', flights=flights)
+
+    # Render the booking form
+    return render_template('book_flight.html')
+
+
+
+
 
 
 if __name__ == '__main__':
