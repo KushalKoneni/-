@@ -84,6 +84,18 @@ def create_report_file(report_folder_path: str, test_type: str) -> str:
         report_file.write(f"Test report for {test_type} tests.\n")
     return report_file_path
 
+from testing.dbTests import test_setup_db
+
+def test_db() -> tuple:
+    """
+    Tests that the database is initialized successfully.
+    """
+    try:
+        test_setup_db()
+        return True, None
+    except Exception as e:
+        return False, f"test_init_db failed with error: {e}"
+
 
 def main() -> None:
     """
