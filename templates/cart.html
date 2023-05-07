@@ -1,0 +1,15 @@
+{% if selected_flight %}
+    <p>Selected Flight:</p>
+    <ul>
+        <li>{{ selected_flight['flight_number'] }}</li>
+        <li>{{ selected_flight['origin'] }}</li>
+        <li>{{ selected_flight['destination'] }}</li>
+        <li>{{ selected_flight['departure_time'] }}</li>
+        <li>{{ selected_flight['arrival_time'] }}</li>
+        <li>{{ selected_flight['price'] }}</li>
+    </ul>
+{% endif %}
+
+{% if total_cost %}
+    <p>Total Cost: {{ total_cost }}</p>
+{% endif %}

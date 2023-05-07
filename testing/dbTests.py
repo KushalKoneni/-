@@ -106,3 +106,28 @@ def test_setup_db(db: Database = None) -> tuple:
         return False, error
     else:
         return True, 'Database path is correct.'
+
+def test_get_flight_by_id(db: Database = None) -> tuple:
+    """
+    Tests that the get_flight_by_id method returns a single flight.
+
+    args:
+        - db: a Database object (optional)
+
+    returns:
+        - error_report: a tuple containing a boolean and a string,
+          
+    """
+    db = Database('flights.db') if db is None else db
+
+    flight_id = 1
+    flight = db.get_flight_by_id(flight_id)
+
+    if not isinstance(flight, dict):
+        error = f'Error in test_get_flight_by_id: get_flight_by_id did not return a dictionary.\n  - Actual: {type(flight)}'
+        return False, error
+    elif flight['id'] != flight_id:
+        error = f'Error in test_get_flight_by_id: get_flight_by_id returned the wrong flight.\n  - Expected id: {flight_id}\n  - Actual id: {flight["id"]}'
+        return False, error
+    else:
+        return True, 'get_flight_by_id returned the correct flight.'
