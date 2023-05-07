@@ -171,6 +171,26 @@ def book_flight():
     # Render the booking form
     return render_template('book_flight.html')
 
+flight_cart = []
+
+@app.route('/cart', methods=['POST', 'GET'])
+def cart():
+    if request.method == 'POST':
+        selected_flights = request.form.getlist('flight_id')
+        conn = sqlite3.connect('database/flights.db')
+        c = conn.cursor()
+
+        for flight_id in selected_flights:
+            c.execute("SELECT * FROM flights WHERE id=?", (flight_id,))
+            flight_data = c.fetchone()
+            flight_cart.append(flight_data)
+
+        conn.close()
+    
+    return render_template('cart.html', cart=flight_cart)
+
+
+
 @app.route('/manage-flights')
 def manage_flights():
     selected_flight_id = request.args.get('flight_id')
@@ -193,10 +213,6 @@ def manage_flights():
     return render_template('manage-flights.html', selected_flight=selected_flight)
 
 
-
-@app.route('/cart')
-def cart():
-    return render_template('cart.html')
 
 
 

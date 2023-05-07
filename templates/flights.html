@@ -2,35 +2,37 @@
 
 {% block content %}
   <h1>Available Flights</h1>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Flight ID</th>
-        <th>Origin</th>
-        <th>Destination</th>
-        <th>Distance</th>
-        <th>Departure Time</th>
-        <th>Arrival Time</th>
-        <th>Price</th>
-    
-      </tr>
-    </thead>
-    <tbody>
-      {% for flight in flights %}
+  <form action="{{ url_for('cart') }}" method="POST">
+    <table class="table table-striped">
+      <thead>
         <tr>
-          <td>{{ flight[0] }}</td>
-          <td>{{ flight[1] }}</td>
-          <td>{{ flight[2] }}</td>
-          <td>{{ flight[3] }}</td>
-          <td>{{ flight[4] }}</td>
-          <td>{{ flight[5] }}</td>
-          <td>{{ flight[6] }}</td>
-          
+          <th>Flight ID</th>
+          <th>Origin</th>
+          <th>Destination</th>
+          <th>Distance</th>
+          <th>Departure Time</th>
+          <th>Arrival Time</th>
+          <th>Price</th>
+          <th>Select</th>
         </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
-  
-
+      </thead>
+      <tbody>
+        {% for flight in flights %}
+          <tr>
+            <td>{{ flight[0] }}</td>
+            <td>{{ flight[1] }}</td>
+            <td>{{ flight[2] }}</td>
+            <td>{{ flight[3] }} miles</td>
+            <td>{{ flight[4] }}</td>
+            <td>{{ flight[5] }}</td>
+            <td>${{ flight[6] }}</td>
+            <td>
+              <input type="checkbox" name="flight_id" value="{{ flight[0] }}">
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <button type="submit" class="btn btn-primary mt-3">Add to Cart</button>
+  </form>
 {% endblock %}
