@@ -107,12 +107,6 @@ def register():
     db.insert_user(username, key, email, first_name, last_name)
     return render_template('index.html')
 
-@app.route('/calculate', methods=['POST'])
-def calculate():
-    time_minutes = 1
-    
-    return render_template('results.html', time=time_minutes)
-''''''
 @app.route('/checkout', methods=['POST'])
 def checkout():
     """
@@ -144,12 +138,6 @@ def checkout():
 @app.route('/book-flights')
 def book_flights():
     return render_template('book-flights.html')
-
-
-
-
-
-
 
 @app.route('/', methods=['GET', 'POST'])
 def book_flight():
