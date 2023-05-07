@@ -2,7 +2,7 @@
 
 from authentication.authTools import login_pipeline, update_passwords, hash_password
 from database.db import Database
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash, redirect
 from core.session import Sessions
 import sqlite3
 
@@ -112,7 +112,7 @@ def calculate():
     time_minutes = 1
     
     return render_template('results.html', time=time_minutes)
-
+''''''
 @app.route('/checkout', methods=['POST'])
 def checkout():
     """
@@ -148,9 +148,8 @@ def book_flights():
 
 
 
-@app.route('/manage-flights')
-def manage_flights():
-    return render_template('manage-flights.html')
+
+
 
 @app.route('/', methods=['GET', 'POST'])
 def book_flight():
@@ -171,6 +170,47 @@ def book_flight():
 
     # Render the booking form
     return render_template('book_flight.html')
+
+flight_cart = []
+
+@app.route('/cart', methods=['POST', 'GET'])
+def cart():
+    if request.method == 'POST':
+        selected_flights = request.form.getlist('flight_id')
+        conn = sqlite3.connect('database/flights.db')
+        c = conn.cursor()
+
+        for flight_id in selected_flights:
+            c.execute("SELECT * FROM flights WHERE id=?", (flight_id,))
+            flight_data = c.fetchone()
+            flight_cart.append(flight_data)
+
+        conn.close()
+    
+    return render_template('cart.html', cart=flight_cart)
+
+
+
+@app.route('/manage-flights')
+def manage_flights():
+    selected_flight_id = request.args.get('flight_id')
+    selected_flight = None
+    if selected_flight_id:
+        # query the database to get the flight details
+        with sqlite3.connect('flights.db') as conn:
+            cursor = conn.cursor()
+            cursor.execute('SELECT * FROM flights WHERE flight_number = ?', (selected_flight_id,))
+            row = cursor.fetchone()
+            if row:
+                selected_flight = {
+                    'flight_number': row[0],
+                    'origin': row[1],
+                    'destination': row[2],
+                    'departure_time': row[3],
+                    'arrival_time': row[4],
+                    'price': row[5],
+                }
+    return render_template('manage-flights.html', selected_flight=selected_flight)
 
 
 
