@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book a Flight</title>
+</head>
+<body>
+	<h1>Book a Flight</h1>
+	<form action="/" method="post">
+		<label for="city_1">Origin City:</label>
+		<select name="city_1" id="city_1">
+			<option value="New York City">New York City</option>
+			<option value="Los Angeles">Los Angeles</option>
+			<option value="San Francisco">San Francisco</option>
+		</select>
+		<label for="city_2">Destination City:</label>
+		<select name="city_2" id="city_2">
+			<option value="New York City">New York City</option>
+			<option value="Los Angeles">Los Angeles</option>
+			<option value="San Francisco">San Francisco</option>
+		</select>
+		<input type="submit" value="Search Flights">
+	</form>
+	
+	{% if flights %}
+		<h2>Flights from {{ origin }} to {{ destination }}:</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Flight ID</th>
+					<th>Origin</th>
+					<th>Destination</th>
+					<th>Distance</th>
+					<th>Departure Time</th>
+					<th>Arrival Time</th>
+					<th>Price</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				{% for flight in flights %}
+				<tr>
+					<td>{{ flight[0] }}</td>
+					<td>{{ flight[1] }}</td>
+					<td>{{ flight[2] }}</td>
+					<td>{{ flight[3] }}</td>
+					<td>{{ flight[4] }}</td>
+					<td>{{ flight[5] }}</td>
+					<td>{{ flight[6] }}</td>
+					
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% endif %}
+</body>
+</html>
+{% endblock %}

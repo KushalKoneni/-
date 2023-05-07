@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <h1>Available Flights</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Flight ID</th>
+					<th>Origin</th>
+					<th>Destination</th>
+					<th>Distance</th>
+					<th>Departure Time</th>
+					<th>Arrival Time</th>
+					<th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for flight in flights %}
+        <tr>
+          <td>{{ flight[0] }}</td>
+          <td>{{ flight[1] }}</td>
+          <td>{{ flight[2] }}</td>
+          <td>{{ flight[3] }}</td>
+          <td>{{ flight[4] }}</td>
+          <td>{{ flight[5] }}</td>
+          <td>{{ flight[6] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
