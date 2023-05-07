@@ -1,14 +1,33 @@
 {% extends 'layout.html' %}
 
+{% block content %}
+
 {% if selected_flight %}
-    <p>Current Chosen flights:</p>
-    <ul>
-        <li>{{ selected_flight['flight_number'] }}</li>
-        <li>{{ selected_flight['origin'] }}</li>
-        <li>{{ selected_flight['destination'] }}</li>
-        <li>{{ selected_flight['departure_time'] }}</li>
-        <li>{{ selected_flight['arrival_time'] }}</li>
-        <li>{{ selected_flight['price'] }}</li>
-    </ul>
+    <h2>Selected Flight:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Flight Number</th>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ selected_flight['flight_number'] }}</td>
+                <td>{{ selected_flight['origin'] }}</td>
+                <td>{{ selected_flight['destination'] }}</td>
+                <td>{{ selected_flight['departure_time'] }}</td>
+                <td>{{ selected_flight['arrival_time'] }}</td>
+                <td>{{ selected_flight['price'] }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% else %}
+    <p>No flight selected.</p>
 {% endif %}
 
+{% endblock %}

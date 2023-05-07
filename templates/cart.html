@@ -1,15 +1,16 @@
-{% if selected_flight %}
-    <p>Selected Flight:</p>
-    <ul>
-        <li>{{ selected_flight['flight_number'] }}</li>
-        <li>{{ selected_flight['origin'] }}</li>
-        <li>{{ selected_flight['destination'] }}</li>
-        <li>{{ selected_flight['departure_time'] }}</li>
-        <li>{{ selected_flight['arrival_time'] }}</li>
-        <li>{{ selected_flight['price'] }}</li>
-    </ul>
-{% endif %}
+{% extends 'layout.html' %}
 
-{% if total_cost %}
-    <p>Total Cost: {{ total_cost }}</p>
-{% endif %}
+{% block content %}
+    <h1>Cart</h1>
+    {% if flight_ids %}
+        <h2>Selected Flights:</h2>
+        <ul>
+            {% for flight_id in flight_ids %}
+                {% set flight = get_flight(flight_id) %}
+                <li>{{ flight[0] }} from {{ flight[1] }} to {{ flight[2] }} for ${{ flight[6] }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No flights selected.</p>
+    {% endif %}
+{% endblock %}

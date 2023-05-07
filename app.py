@@ -112,7 +112,7 @@ def calculate():
     time_minutes = 1
     
     return render_template('results.html', time=time_minutes)
-
+''''''
 @app.route('/checkout', methods=['POST'])
 def checkout():
     """
@@ -148,9 +148,8 @@ def book_flights():
 
 
 
-@app.route('/manage-flights')
-def manage_flights():
-    return render_template('manage-flights.html')
+
+
 
 @app.route('/', methods=['GET', 'POST'])
 def book_flight():
@@ -172,12 +171,33 @@ def book_flight():
     # Render the booking form
     return render_template('book_flight.html')
 
+@app.route('/manage-flights')
+def manage_flights():
+    selected_flight_id = request.args.get('flight_id')
+    selected_flight = None
+    if selected_flight_id:
+        # query the database to get the flight details
+        with sqlite3.connect('flights.db') as conn:
+            cursor = conn.cursor()
+            cursor.execute('SELECT * FROM flights WHERE flight_number = ?', (selected_flight_id,))
+            row = cursor.fetchone()
+            if row:
+                selected_flight = {
+                    'flight_number': row[0],
+                    'origin': row[1],
+                    'destination': row[2],
+                    'departure_time': row[3],
+                    'arrival_time': row[4],
+                    'price': row[5],
+                }
+    return render_template('manage-flights.html', selected_flight=selected_flight)
 
 
 
 @app.route('/cart')
 def cart():
     return render_template('cart.html')
+
 
 
 
