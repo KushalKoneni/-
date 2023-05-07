@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains template code for a simple online store, built for my students in ITSC 3155 - Software Engineering at UNC Charlotte. Since the code is written as a starting template for students' group final projects, this repository should not be seen as a complete, production-ready online store. Functional features like user session management, database access, unit testing, and server-side rendering are included but kept at an abstract level. Users are encouraged to fork this repository and customize it to the needs of their own project.
+We've created a simple checking and booking system for flights between various cities across the United States. A user is able to add a flight after searching to their cart and then manage those existing flights.
 
 ## How to Use
 

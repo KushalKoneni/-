@@ -12,8 +12,8 @@ This script is automatically run when the `setup.sh` script from root is run, bu
 
 ## schema.sql File
 
-This file contains the SQL commands to create the database based on a predefined schema. This file is run by the `resetDB.sh` script, and should not be run manually.
+created extra tables for flight data and distances.
 
 ## startingData.sql File
 
-This file contains the SQL commands to insert the starter data into the database. This file is run by the `resetDB.sh` script, and should not be run manually.
+Data containing neccessary flights to and from various cities have been added.
