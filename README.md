@@ -1,4 +1,4 @@
-# Online Store Template
+# Flight Checking and Booking System
 
 ## Description
 
