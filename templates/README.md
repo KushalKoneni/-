@@ -26,9 +26,6 @@ This file contains the html for the login page. This uses html forms to collect 
 
 The `register.html` file contains the html for the registration page. Similar to the `login.html` file, this uses html forms to collect the registration information from the user, and then passes that information to the `register()` method in the `app.py` file. Additional functionality, such as a "terms of service" link or a "privacy policy" link could be added here and may be a good avenue for some creativity.
 
-## manage-flights.html File
-
-Contains a user interface for managing flight reservations. Review flights
 
 ## cart.html File
 
