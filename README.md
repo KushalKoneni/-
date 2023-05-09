@@ -2,7 +2,7 @@
 
 ## Description
 
-We've created a simple checking and booking system for flights between various cities across the United States. A user is able to add a flight after searching to their cart and then manage those existing flights.
+We've created a simple checking and booking system for flights between various cities across the United States. By clicking on the "Find Available Flights" tab, a user is able to search for a flight, select it, and then add it to cart. It will then be displayed on the cart page. User can continue adding flights and it will be shown in the cart.
 
 ## How to Use
 

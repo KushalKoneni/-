@@ -139,6 +139,20 @@ def checkout():
 def book_flights():
     return render_template('book-flights.html')
 
+"""
+Renders the booking form for a GET request to the root URL and displays flights matching the origin and destination cities for a POST request.
+
+Args:
+    None
+
+Returns:
+    If a POST request is made, returns a rendered template named 'flights.html' displaying the matching flights.
+    If a GET request is made, returns a rendered  template named 'book_flight.html' displaying the booking form.
+
+Modifies:
+    None, but retrieves data from a SQLite database and a form.
+"""
+
 @app.route('/', methods=['GET', 'POST'])
 def book_flight():
     if request.method == 'POST':
@@ -158,9 +172,21 @@ def book_flight():
 
     # Render the booking form
     return render_template('book_flight.html')
+"""
+Renders the cart page for both GET and POST requests to the '/cart' endpoint.
+
+Args:
+    None
+
+Returns:
+    If a POST request is made, returns a rendered template named 'cart.html' displaying the selected flights in the cart.
+    If a GET request is made, returns a rendered template named 'cart.html' displaying the current contents of the cart.
+
+Modifies:
+    If a POST request is made, modifies the global list variable 'flight_cart' by appending the selected flights to it.
+"""
 
 flight_cart = []
-
 @app.route('/cart', methods=['POST', 'GET'])
 def cart():
     if request.method == 'POST':
@@ -176,33 +202,6 @@ def cart():
         conn.close()
     
     return render_template('cart.html', cart=flight_cart)
-
-
-
-@app.route('/manage-flights')
-def manage_flights():
-    selected_flight_id = request.args.get('flight_id')
-    selected_flight = None
-    if selected_flight_id:
-        # query the database to get the flight details
-        with sqlite3.connect('storeRecords.db') as conn:
-            cursor = conn.cursor()
-            cursor.execute('SELECT * FROM flights WHERE flight_number = ?', (selected_flight_id,))
-            row = cursor.fetchone()
-            if row:
-                selected_flight = {
-                    'flight_number': row[0],
-                    'origin': row[1],
-                    'destination': row[2],
-                    'departure_time': row[3],
-                    'arrival_time': row[4],
-                    'price': row[5],
-                }
-    return render_template('manage-flights.html', selected_flight=selected_flight)
-
-
-
-
 
 
 if __name__ == '__main__':
